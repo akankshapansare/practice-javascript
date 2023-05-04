@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Random name generator from given array</title>
+    </head>
+    <body>
+
+        <p>
+
+
+        </p>
+
+        <script>
+            const names = ['Akanksha', 'Aniket', 'Vira', 'Yami']
+            const para = document.querySelector('p');
+
+            function chooseName() {
+                const randomNumber = Math.floor(Math.random() * names.length);
+                const choice = names[randomNumber];
+                para.textContent = choice;
+            }
+
+            chooseName();
+
+        </script>
+    </body>
+</html>
