@@ -1,0 +1,27 @@
+<!--
+    In this task we want you to update the code from Task 3 to use a constructor for the cats, 
+    so we only have to define greeting() once.
+-->
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <title>Object basics: Task 4</title>
+  </head>
+  <body>
+    <script>
+      function Cat(name, breed, color) {
+        this.name = name;
+        this.breed = breed;
+        this.color = color;
+        this.greeting = function () {
+          console.log(`Hello said, ${this.name} the ${this.breed}.`);
+        };
+      }
+      const cat1 = new Cat("Bertie", "Cymric", "white");
+      const cat2 = new Cat("Frilly", "Birman", "orange");
+      cat1.greeting();
+      cat2.greeting();
+    </script>
+  </body>
+</html>

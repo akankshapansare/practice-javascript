@@ -1,0 +1,61 @@
+<!--
+In our next task, we want you to have a go at creating your own object literal to represent one of your favourite bands. 
+The required members are:
+
+name: A string representing the band name.
+nationality: A string representing the country the band comes from.
+genre: What type of music the band plays.
+members: A number representing the number of members the band has.
+formed: A number representing the year the band formed.
+split: A number representing the year the band split up, or false if they are still together.
+albums: An array representing the albums released by the band. Each array item should be an object containing the following members:
+name: A string representing the name of the album.
+released: A number representing the year the album was released.
+Include at least two albums in the albums array.
+Once you've done this, you should then write a string to the variable bandInfo, 
+which will contain a small biography detailing their name, nationality, years active, and style, 
+and the title and release date of their first album.
+-->
+
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <title>Object Basics Task: 2</title>
+  </head>
+  <body>
+    <p></p>
+    <script>
+      let bandInfo;
+      // Add your code here
+      const band = {
+        name: "Agnee",
+        nationality: "Indian",
+        genre: "Rock",
+        members: 4,
+        formed: 2007,
+        split: false,
+        albums: [
+          {
+            name: "Sadho Re",
+            length: "4:11",
+          },
+          {
+            name: "Kabira",
+            length: "4:32",
+          },
+          {
+            name: "Shaam Tanha",
+            length: "4:59",
+          },
+        ],
+      };
+
+      bandInfo = `The ${band.nationality} ${band.genre} band ${band.name} was formed on ${band.formed}. Their popular album is ${band.albums[0].name}.`;
+
+      // Don't edit the code below here!
+      let para1 = document.querySelector("p");
+      para1.textContent = bandInfo;
+    </script>
+  </body>
+</html>
