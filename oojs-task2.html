@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="eng-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="widt=device-width" />
+    <title>Object oriented Java script task 2</title>
+  </head>
+  <body>
+    <script>
+      class Shape {
+        name;
+        sides;
+        sideLength;
+
+        constructor(name, sides, sideLength) {
+          this.name = name;
+          this.sides = sides;
+          this.sideLength = sideLength;
+        }
+
+        clacPerimeter() {
+          console.log(
+            `The ${this.name}'s perimeter length is ${
+              this.sides * this.sideLength
+            }.`
+          );
+        }
+      }
+
+      class Square extends Shape {
+        constructor(sideLength) {
+          super("Square", 4, sideLength);
+        }
+        calcArea() {
+          console.log(
+            `The ${this.name}'s area is ${
+              this.sideLength * this.sideLength
+            } squared.`
+          );
+        }
+      }
+
+      const square = new Square(4);
+      square.clacPerimeter();
+      square.calcArea();
+    </script>
+  </body>
+</html>
