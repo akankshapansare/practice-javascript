@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Simple JSON Example</title>
+  </head>
+  <body>
+    <script>
+      const superHeroes = {
+        squadName: "The Avengers",
+        homeTown: "Upstate New York",
+        formed: 2012,
+        secretBase: "Super Tower",
+        active: true,
+        members: [
+          {
+            name: "Iron Man",
+            age: 50,
+            secretIdentity: "Tony Stark",
+            powers: ["Flying", "Magnetic manipulation"],
+          },
+          {
+            name: "Ant Man",
+            age: 46,
+            secretIdentity: "Scott Lang",
+            powers: ["Turning tiny", "Telepathic communication with insects"],
+          },
+          {
+            name: "Hulk",
+            age: 54,
+            secretIdentity: "Bruce Banner",
+            powers: ["Superhuman strength", "Gamma Ray emission"],
+          },
+          {
+            name: "Captain America",
+            age: 93,
+            seceretIdentity: "Steve Rogers",
+            powers: ["Accelerated Healing", "Master martial artist"],
+          },
+        ],
+      };
+      //Access second superpower of the third heroe : Gamma Ray Emission
+      console.log(`${superHeroes["members"][2]["powers"][1]}`);
+    </script>
+  </body>
+</html>
