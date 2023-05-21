@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Draw one triangle using Canvas</title>
+  <script>
+    function draw() {
+      const canvas = document.getElementById("tutorial");
+      if (canvas.getContext) {
+        const ctx = canvas.getContext("2d");
+
+        ctx.beginPath();
+        ctx.moveTo(75, 50);
+        ctx.lineTo(100, 75);
+        ctx.lineTo(100, 25);
+        ctx.fill();
+      } else {
+        console.log("Canvas is not supported");
+      }
+    }
+  </script>
+</html>
+<body onload="draw();">
+  <canvas id="tutorial" width="150" height="150"></canvas>
+</body>
