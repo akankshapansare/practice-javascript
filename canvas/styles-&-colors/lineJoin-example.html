@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="=viewport" content="width=device-width" />
+    <title>A lineJoin example</title>
+    <script>
+      function draw() {
+        const ctx = document.getElementById("tutorial").getContext("2d");
+        ctx.lineWidth = 10;
+        ["round", "bevel", "miter"].forEach((lineJoin, i) => {
+          ctx.lineJoin = lineJoin;
+          ctx.beginPath();
+          ctx.moveTo(-5, 5 + i * 40);
+          ctx.lineTo(35, 45 + i * 40);
+          ctx.lineTo(75, 5 + i * 40);
+          ctx.lineTo(115, 45 + i * 40);
+          ctx.lineTo(155, 5 + i * 40);
+          ctx.stroke();
+        });
+      }
+    </script>
+  </head>
+  <body onload="draw();">
+    <canvas id="tutorial" width="300" height="150"></canvas>
+  </body>
+</html>
